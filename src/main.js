@@ -1,7 +1,11 @@
 import data from "./data.js"
+import { alphaOrd, reverOrd } from "./functions.js"
 const container = document.getElementById("container")
+
 const allDogs= data.dogs
-console.log(allDogs)
+
+
+
 
 const containerHTML = (allDogs) => {    
     const div = document.createElement("div")
@@ -16,9 +20,27 @@ const containerHTML = (allDogs) => {
 
 allDogs.forEach(oneDog => container.appendChild(containerHTML(oneDog)))
 
-const filterBybreed = (breed, allDogs)=> {
-    return allDogs.filter(eachBreed => eachBreed.breed === breed)
-    console.log(filterBybreed); 
-};
+// const filterBreed = document.getElementById("filterBreed")
+// filterBreed.addEventListener("change", function (breed){
+// container.innerHTML = ""
+// })
 
   
+
+
+const orderSelect=document.getElementById("order");
+orderSelect.addEventListener ("change", (e) => {
+  let orderBox= alphaOrd(allDogs);
+  
+  if(e.target.value === "A-Z"){
+    container.innerHTML="";
+    alphaOrd(orderBox, allDogs).forEach(oneDog => container.appendChild(containerHTML(oneDog)))
+  }
+
+  if(e.target.value === "Z-A"){
+    container.innerHTML="";
+    reverOrd(orderBox, allDogs).forEach(oneDog => container.appendChild(containerHTML(oneDog)))
+
+  };
+
+});

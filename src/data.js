@@ -116,10 +116,6 @@ export default{
           "image":"https://images.dog.ceo/breeds/husky/n02110185_13197.jpg",
           "breed":"husky"
         },
-      {
-          "id":"21",
-          "image":"https://images.dog.ceo/breeds/labrador/lab_young.JPG",
-          "breed":"labrador"
-        }
+      
     ]
   }
