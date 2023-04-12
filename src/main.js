@@ -1,7 +1,7 @@
 import data from "./data.js"
 import { alphaOrd, reverOrd } from "./functions.js"
-const container = document.getElementById("container")
 
+const container = document.getElementById("container")
 const allDogs= data.dogs
 
 
@@ -9,10 +9,14 @@ const allDogs= data.dogs
 
 const containerHTML = (allDogs) => {    
     const div = document.createElement("div")
-    const breedDog = document.createElement("h3") 
+    div.classList.add("col-sm-3")
+    const breedDog = document.createElement("h5")
+    breedDog.classList.add("text-capitalize")
+    breedDog.classList.add("text-nowrap")
     breedDog.textContent = allDogs.breed
     const imageDog = document.createElement("img") 
     imageDog.setAttribute("src", allDogs.image)
+    imageDog.classList.add("img-responsive")
     div.append(breedDog, imageDog)
     return div
 }

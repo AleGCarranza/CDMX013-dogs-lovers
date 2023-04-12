@@ -1,9 +1,9 @@
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#container{
+/* #container{
    padding: 20px;
-    background-color: purple;
+   
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -25,4 +25,4 @@
 }
 h3{
     color: purple;
-}
+} */
